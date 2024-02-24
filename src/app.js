@@ -52,7 +52,7 @@ app.get('/weather',(req,res)=>{
         if(error){
             return res.send({error:error})
         }
-        console.log("Latitude: "+chalk.red(latitude)+" Longitute: "+chalk.green(longitude)+" place: "+ chalk.red(place))
+        //console.log("Latitude: "+chalk.red(latitude)+" Longitute: "+chalk.green(longitude)+" place: "+ chalk.red(place))
     
         weather(latitude,longitude,(error,data)=>{
             if(error){

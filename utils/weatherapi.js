@@ -11,8 +11,8 @@ const weatherAPI=(lat,long,callback)=>{
     
             callback(body.message,undefined)
         }else{
-            //console.log(body)
-        callback(undefined,"The weather is "+ body.current.weather[0].description + ". The temperature is "+ body.current.temp + " degree celcius " + "feels like " + body.current.feels_like +  " degree celcius.")
+            //console.log(body.current)
+        callback(undefined,"The weather is "+ body.current.weather[0].description + ". The temperature is "+ body.current.temp + " degree celcius, " + "feels like " + body.current.feels_like +  " degree celcius with " + body.current.humidity + "% humidity and wind speed of " + body.current.wind_speed + " m/s.")
         }
         
     })
